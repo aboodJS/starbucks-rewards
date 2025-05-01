@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center">
+  <nav class="flex justify-between items-center h-28">
     <div class="flex items-center w-96 mx-3">
       <div class="h-14 w-14 bg-green-700"></div>
       <ul class="flex justify-around w-72">
@@ -41,4 +41,7 @@
       </div>
     </div>
   </nav>
+  <div class="bg-[#1e3932] text-white h-10 flex items-center sticky top-0 w-full">
+    <p class="pl-24">STARBUCKS&reg; REWARDS</p>
+  </div>
 </template>
