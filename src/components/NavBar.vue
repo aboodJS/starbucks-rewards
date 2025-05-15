@@ -37,6 +37,7 @@
           <button class="rounded-2xl py-1 px-3 bg-black text-white hover:opacity-70 transition-all">
             log in
           </button>
+          <i class="bxr bx-menu-close" style="color: #6b6b6b" />
         </div>
       </div>
     </div>
