@@ -42,7 +42,10 @@
       </div>
     </div>
   </nav>
-  <div class="bg-[#1e3932] text-white h-10 flex items-center sticky top-0 w-full">
-    <p class="pl-24">STARBUCKS&reg; REWARDS</p>
+  <div
+    class="bg-[#1e3932] text-white h-10 max-md:h-14 flex items-center max-md:justify-between sticky top-0 w-full"
+  >
+    <p class="md:pl-24 max-md:w-1/3">STARBUCKS&reg; REWARDS</p>
+    <button class="md:hidden border-1 rounded-3xl py-1 px-2">Join in the app</button>
   </div>
 </template>
