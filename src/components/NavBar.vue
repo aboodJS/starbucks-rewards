@@ -1,6 +1,11 @@
 <template>
-  <nav class="flex justify-between items-center h-28">
-    <div class="flex items-center w-96 mx-3">
+  <nav class="flex justify-between items-center h-28 w-screen overflow-x-hidden">
+    <div class="h-14 w-14 bg-green-700 md:hidden"></div>
+    <img
+      class="md:hidden"
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAA6UlEQVRYR+2WYQrDIAxG49hp9RK7hJ521KWMwmTRbyYTWkj/FBptnk+TNtDJrnAyHnIgtCNuyA0hAyh+nTOUUqriajZ+emsjwiMkgnLOooyuoS4Qp9pJrWr/A3So4HtlSxaoaSDofNEAyyKXIDkQ0to1FGN8oMlEdx7ylIcNQvuEUor4/t/LvlPr2hYwXWUpcmP8xBW7n6YlvoVOA7Vb1kusB5reMnx+1ozwskder2MopcgVbeMdtYTpKjt+P9o6+k5RaaMw/PTLWGogtOfa+DSQNpF1nu2QWLML8x0ISXVDbggZQPHTnaEXjxY9JQpI6jIAAAAASUVORK5CYII="
+    />
+    <div class="flex items-center mx-3 max-md:hidden">
       <div class="h-14 w-14 bg-green-700"></div>
       <ul class="flex justify-around w-72">
         <li class="text-[15px] font-semibold hover:text-green-700 transition-colors cursor-pointer">
@@ -14,7 +19,7 @@
         </li>
       </ul>
     </div>
-    <div>
+    <div class="max-md:hidden">
       <div class="flex items-center w-96 justify-around">
         <div class="flex hover:text-green-700 transition-colors cursor-pointer">
           <svg
@@ -31,19 +36,22 @@
           <p class="font-semibold hover:text-green-700 transition-colors">Find a store</p>
         </div>
         <div class="flex justify-between w-40">
-          <button class="border-[1px] rounded-2xl py-1 px-3 hover:bg-slate-200 transition-colors">
+          <button
+            class="border-[1px] rounded-2xl py-1 px-3 hover:bg-slate-200 transition-colors cursor-pointer"
+          >
             sign in
           </button>
-          <button class="rounded-2xl py-1 px-3 bg-black text-white hover:opacity-70 transition-all">
+          <button
+            class="rounded-2xl py-1 px-3 bg-black text-white hover:opacity-70 transition-all cursor-pointer"
+          >
             log in
           </button>
-          <i class="bxr bx-menu-close" style="color: #6b6b6b" />
         </div>
       </div>
     </div>
   </nav>
   <div
-    class="bg-[#1e3932] text-white h-10 max-md:h-14 flex items-center max-md:justify-between sticky top-0 w-full"
+    class="bg-[#1e3932] text-white h-10 max-md:h-14 flex items-center max-md:justify-between sticky top-0 w-screen"
   >
     <p class="md:pl-24 max-md:w-1/3">STARBUCKS&reg; REWARDS</p>
     <button class="md:hidden border-1 rounded-3xl py-1 px-2">Join in the app</button>

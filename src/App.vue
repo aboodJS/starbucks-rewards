@@ -13,7 +13,7 @@ import NavBar from './components/NavBar.vue'
       </h1>
       <p>Sign up and start enjoying the perks of Starbucks® Rewards.</p>
       <button
-        class="bg-[#00754a] h-10 w-24 text-white rounded-3xl py-1 px-3 hover:bg-green-800 transition-colors max-md:justify-self-center max-md:hidden"
+        class="bg-[#00754a] h-10 w-24 text-white rounded-3xl py-1 px-3 hover:bg-green-800 transition-colors max-md:justify-self-center max-md:hidden cursor-pointer"
       >
         Join now
       </button>
