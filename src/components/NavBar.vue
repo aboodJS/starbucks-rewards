@@ -1,7 +1,19 @@
+<script setup>
+import { ref } from 'vue'
+
+const show = ref(false)
+</script>
+
 <template>
   <nav class="flex justify-between items-center h-28 w-screen overflow-x-hidden">
     <div class="h-14 w-14 bg-green-700 md:hidden"></div>
     <img
+      @click="
+        () => {
+          show = !show
+          console.log(show)
+        }
+      "
       class="md:hidden"
       src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAA6UlEQVRYR+2WYQrDIAxG49hp9RK7hJ521KWMwmTRbyYTWkj/FBptnk+TNtDJrnAyHnIgtCNuyA0hAyh+nTOUUqriajZ+emsjwiMkgnLOooyuoS4Qp9pJrWr/A3So4HtlSxaoaSDofNEAyyKXIDkQ0to1FGN8oMlEdx7ylIcNQvuEUor4/t/LvlPr2hYwXWUpcmP8xBW7n6YlvoVOA7Vb1kusB5reMnx+1ozwskder2MopcgVbeMdtYTpKjt+P9o6+k5RaaMw/PTLWGogtOfa+DSQNpF1nu2QWLML8x0ISXVDbggZQPHTnaEXjxY9JQpI6jIAAAAASUVORK5CYII="
     />
@@ -56,7 +68,12 @@
     <p class="md:pl-24 max-md:w-1/3">STARBUCKS&reg; REWARDS</p>
     <button class="md:hidden border-1 rounded-3xl py-1 px-2">Join in the app</button>
   </div>
-  <aside class="bg-white w-[70vw] h-[50%] -right-10 absolute">
+  <aside
+    :class="[
+      'bg-white w-[70vw] h-[50%] transition-all absolute md:hidden',
+      show ? '-right-10' : '-right-100',
+    ]"
+  >
     <ul class="grid h-36 gap-8 mt-10 justify-center w-28">
       <li>Menu</li>
       <li>Rewards</li>
