@@ -1,4 +1,5 @@
 <script setup>
+import GetStarted from './components/getStarted.vue'
 import NavBar from './components/NavBar.vue'
 </script>
 
@@ -31,5 +32,25 @@ import NavBar from './components/NavBar.vue'
       alt=""
       class="md:w-1/2 h-[67vh] max-md:mt-7"
     />
+  </section>
+  <section class="grid content-center justify-center gap-5 my-16">
+    <div class="text-center grid gap-5">
+      <h1 class="text-3xl font-bold">Getting started is easy</h1>
+      <p>Earn Stars and get rewarded in a few easy steps.</p>
+    </div>
+    <main class="md:flex justify-center">
+      <GetStarted title="Create an account" number="1"
+        >To get started, join now. You can also Join in the app to get access to the full range of
+        Starbucks® Rewards benefits.</GetStarted
+      >
+      <GetStarted title="Order and pay how you’d like" number="2"
+        >Use cash, credit/debit card or save some time and pay right through the app. You’ll collect
+        Stars all ways. Learn how</GetStarted
+      >
+      <GetStarted title="Earn Stars, get Rewards" number="3"
+        >As you earn Stars, you can redeem them for Rewards—like free food, drinks, and more. Start
+        redeeming with as little as 25 Stars!</GetStarted
+      >
+    </main>
   </section>
 </template>

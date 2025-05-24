@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-
+import App from '@/App.vue'
 const show = ref(false)
 </script>
 
