@@ -4,10 +4,10 @@ defineProps(['number', 'title'])
 
 <template>
   <main
-    class="grid md:gap-5 max-md:grid-rows-2 max-md:grid-cols-4 max-md:justify-center max-md:gap-x-5 w-fit"
+    class="grid md:gap-5 max-md:grid-rows-2 max-md:grid-cols-4 max-md:justify-center max-md:gap-x-5 md:grid-cols-1"
   >
     <div
-      class="rounded-full text-2xl border-2 w-9 text-center md:justify-self-center max-md:row-span-2 self-center justify-self-end"
+      class="rounded-full text-2xl border-2 w-9 text-center justify-self-center max-md:row-span-2 self-center max-md:justify-self-end"
     >
       {{ number }}
     </div>
