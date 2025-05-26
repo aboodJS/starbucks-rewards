@@ -1,6 +1,7 @@
 <script setup>
 import GetStarted from './components/getStarted.vue'
 import NavBar from './components/NavBar.vue'
+import RewardShocase from './components/rewardShocase.vue'
 </script>
 
 <template>
@@ -59,4 +60,5 @@ import NavBar from './components/NavBar.vue'
       >
     </main>
   </section>
+  <RewardShocase></RewardShocase>
 </template>
