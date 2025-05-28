@@ -1,13 +1,14 @@
 <template>
-  <main class="flex justify-center">
-    <img src="" alt="" />
-    <div>
-      <h1 class="text-2xl font-bold w-1/3">
-        Handcrafted drink (Cold Brew, lattes and more) or hot breakfast
-      </h1>
+  <main class="flex justify-center w-fit max-md:grid">
+    <img
+      src="/src/assets/pexels-brigitte-tohm-36757-131893-removebg-preview.png"
+      alt=""
+      class="h-40 justify-self-center"
+    />
+    <div class="text-center grid justify-center">
+      <h1 class="text-2xl font-bold w-1/3">Customize your drink</h1>
       <p class="w-1/3">
-        Turn good mornings great with a delicious handcrafted drink of your choice, breakfast
-        sandwich or oatmeal on us.
+        Make your drink just right with an extra espresso shot or a dash of your favorite syrup.
       </p>
     </div>
   </main>
