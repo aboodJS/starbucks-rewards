@@ -48,8 +48,12 @@ const tabs = { first, second, third, fourth, fifth }
         </li>
       </ul>
     </div>
-    <section class="md:h-64 max-md:h-fit bg-[#d4e9e2] inset-shadow grid justify-center">
-      <component :is="tabs[currentTab]" class="justify-self-center"></component>
+    <section
+      class="md:h-64 max-md:h-[70vh] bg-[#d4e9e2] inset-shadow grid justify-center items-center"
+    >
+      <div class="w-fit">
+        <component :is="tabs[currentTab]"></component>
+      </div>
     </section>
   </main>
 </template>
