@@ -4,9 +4,13 @@ defineProps(['image', 'title'])
 
 <template>
   <main
-    class="grid md:gap-5 max-md:grid-rows-2 max-md:grid-cols-4 max-md:justify-center max-md:gap-x-5 md:grid-cols-1 text-center"
+    class="grid md:gap-5 max-md:grid-rows-2 max-md:grid-cols-4 max-md:justify-center max-md:gap-x-5 md:grid-cols-1 md:text-center"
   >
-    <p class="font-bold w-fit justify-self-center max-md:text-left max-md:self-center col-span-2">
+    <img :src="image" alt="" class="justify-self-center h-[112px] row-span-2 self-center" />
+
+    <p
+      class="font-bold w-fit md:justify-self-center max-md:text-left max-md:self-center col-span-2"
+    >
       {{ title }}
     </p>
     <p
@@ -14,6 +18,6 @@ defineProps(['image', 'title'])
     >
       <slot></slot>
     </p>
-    <a href="#" class="text-center text-[#006241] underline">learn more</a>
+    <a href="#" class="text-center text-[#006241] underline col-start-2">learn more</a>
   </main>
 </template>

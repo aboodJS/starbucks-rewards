@@ -75,14 +75,20 @@ defineProps(['hg'])
         </p>
       </div>
       <main class="md:flex justify-center max-md:grid gap-7 justify-self-center">
-        <Extra title="Fun freebies"
+        <Extra
+          title="Fun freebies"
+          image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
           >Not only can you earn free food, drinks and more, look forward to a birthday treat on
           us.</Extra
         >
-        <Extra title="Order & pay ahead"
+        <Extra
+          title="Order & pay ahead"
+          image="https://www.starbucks.com/weblx/images/rewards/benefits/2-order-and-pay-ahead.jpg"
           >Master the art of ordering ahead with saved favorites and payment methods.</Extra
         >
-        <Extra title="Get to free faster"
+        <Extra
+          title="Get to free faster"
+          image="https://www.starbucks.com/weblx/images/rewards/benefits/3-get-to-free-faster.jpg"
           >Earn Stars even quicker with Bonus Star challenges, Double Star Days and exciting
           games.</Extra
         >
