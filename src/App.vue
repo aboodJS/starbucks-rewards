@@ -3,12 +3,14 @@ import Extra from './components/ExtraBox.vue'
 import GetStarted from './components/getStarted.vue'
 import NavBar from './components/NavBar.vue'
 import RewardShocase from './components/rewardShocase.vue'
+import SideBar from './components/SideBar.vue'
 defineProps(['hg'])
 </script>
 
 <template>
   <main>
     <NavBar></NavBar>
+    <SideBar></SideBar>
     <div
       class="bg-[#1e3932] text-white h-10 max-md:h-14 flex items-center max-md:justify-between sticky top-0 w-screen"
     >
