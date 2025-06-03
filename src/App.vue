@@ -1,18 +1,30 @@
 <script setup>
+import { ref } from 'vue'
 import Extra from './components/ExtraBox.vue'
 import GetStarted from './components/getStarted.vue'
 import NavBar from './components/NavBar.vue'
 import RewardShocase from './components/rewardShocase.vue'
 import SideBar from './components/SideBar.vue'
-defineProps(['hg'])
+const visible = ref(false)
 </script>
 
 <template>
-  <main>
-    <NavBar></NavBar>
-    <SideBar></SideBar>
+  <main :class="visible">
+    <NavBar>
+      <img
+        class="md:hidden"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAA6UlEQVRYR+2WYQrDIAxG49hp9RK7hJ521KWMwmTRbyYTWkj/FBptnk+TNtDJrnAyHnIgtCNuyA0hAyh+nTOUUqriajZ+emsjwiMkgnLOooyuoS4Qp9pJrWr/A3So4HtlSxaoaSDofNEAyyKXIDkQ0to1FGN8oMlEdx7ylIcNQvuEUor4/t/LvlPr2hYwXWUpcmP8xBW7n6YlvoVOA7Vb1kusB5reMnx+1ozwskder2MopcgVbeMdtYTpKjt+P9o6+k5RaaMw/PTLWGogtOfa+DSQNpF1nu2QWLML8x0ISXVDbggZQPHTnaEXjxY9JQpI6jIAAAAASUVORK5CYII="
+        @click="
+          () => {
+            visible = !visible
+            console.log(visible)
+          }
+        "
+      />
+    </NavBar>
+    <SideBar v-model="visible"></SideBar>
     <div
-      class="bg-[#1e3932] text-white h-10 max-md:h-14 flex items-center max-md:justify-between sticky top-0 w-screen"
+      class="bg-[#1e3932] text-white h-10 max-md:h-14 flex items-center max-md:justify-between sticky top-0 w-screen z-0"
     >
       <p class="md:pl-24 max-md:w-1/3">STARBUCKS&reg; REWARDS</p>
       <button class="md:hidden border-1 rounded-3xl py-1 px-2">Join in the app</button>

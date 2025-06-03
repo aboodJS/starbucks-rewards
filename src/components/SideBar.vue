@@ -1,6 +1,15 @@
+<script setup>
+const show = defineModel()
+</script>
+
 <template>
-  <aside class="grid md:hidden bg-white w-[70%] absolute h-[60vh] top-42 right-0">
-    <div class="grid h-1/2">
+  <aside
+    :class="[
+      'grid md:hidden bg-white w-[70%] absolute h-[60vh] top-28 z-10',
+      show ? 'right-0' : '-right-80',
+    ]"
+  >
+    <div class="grid h-1/2 mt-12">
       <ul class="grid gap-7 justify-center pb-6">
         <li>Menu</li>
         <li>Rewards</li>
@@ -14,3 +23,11 @@
     </div>
   </aside>
 </template>
+
+<style>
+aside {
+  box-shadow:
+    inset #dfdfdf -1px 2px 2px,
+    0px 0px;
+}
+</style>

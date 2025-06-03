@@ -1,22 +1,13 @@
 <script setup>
 import { ref } from 'vue'
 import App from '@/App.vue'
-const show = ref(false)
 </script>
 
 <template>
-  <nav class="flex justify-between items-center h-28 w-screen overflow-x-hidden">
+  <nav class="flex justify-between items-center h-28 w-screen overflow-x-hidden z-20 shadow-2xl">
     <div class="h-14 w-14 bg-green-700 md:hidden"></div>
-    <img
-      @click="
-        () => {
-          show = !show
-          console.log(show)
-        }
-      "
-      class="md:hidden"
-      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAA6UlEQVRYR+2WYQrDIAxG49hp9RK7hJ521KWMwmTRbyYTWkj/FBptnk+TNtDJrnAyHnIgtCNuyA0hAyh+nTOUUqriajZ+emsjwiMkgnLOooyuoS4Qp9pJrWr/A3So4HtlSxaoaSDofNEAyyKXIDkQ0to1FGN8oMlEdx7ylIcNQvuEUor4/t/LvlPr2hYwXWUpcmP8xBW7n6YlvoVOA7Vb1kusB5reMnx+1ozwskder2MopcgVbeMdtYTpKjt+P9o6+k5RaaMw/PTLWGogtOfa+DSQNpF1nu2QWLML8x0ISXVDbggZQPHTnaEXjxY9JQpI6jIAAAAASUVORK5CYII="
-    />
+    <slot></slot>
+
     <div class="flex items-center mx-3 max-md:hidden">
       <div class="h-14 w-14 bg-green-700"></div>
       <ul class="flex justify-around w-72">
