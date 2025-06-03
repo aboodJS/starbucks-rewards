@@ -9,7 +9,7 @@ const visible = ref(false)
 </script>
 
 <template>
-  <main :class="visible">
+  <main :class="visible ? 'fixed -top-0 overflow-hidden' : ''">
     <NavBar>
       <img
         class="md:hidden"
