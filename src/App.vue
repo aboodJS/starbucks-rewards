@@ -109,13 +109,70 @@ const visible = ref(false)
       </main>
     </section>
 
-    <section class="bg-[#f2f0eb] h-screen grid grid-cols-4 grid-rows-3 mt-28">
+    <section class="bg-[#f2f0eb] h-fit grid grid-cols-4 grid-rows-3 mt-28">
       <div class="col-span-full justify-self-center text-center grid content-evenly">
         <h1 class="text-2xl font-bold justify-self-center">Cash or card, you earn Stars</h1>
         <p class="text-md w-3/4 justify-self-center">
           No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to
           (really delicious) Rewards.
         </p>
+      </div>
+      <div class="grid grid-rows-1 grid-cols-3 col-span-3">
+        <div class="ml-10">
+          <h1 class="text-2xl font-bold">1★Star per dollar</h1>
+          <p>Pay as you go</p>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2 justify-center content-center">
+          <img
+            src="https://www.starbucks.com/weblx/images/rewards/ways-to-pay/1A.png"
+            class="h-44 row-span-2 self-center"
+            alt=""
+          />
+          <h1 class="text-2xl font-bold col-start-2">Scan and pay separately</h1>
+          <p class="col-start-2 text-[14px]">Use cash or credit/debit card at the register.</p>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2 justify-center">
+          <img
+            src="https://www.starbucks.com/weblx/images/rewards/ways-to-pay/1B.png"
+            class="h-44 row-span-2 self-center"
+            alt=""
+          />
+          <h1 class="text-2xl font-bold col-start-2 self-center">Save payment in the app</h1>
+          <p class="col-start-2 text-[14px] self-center">
+            Check-out faster by saving a credit/debit card or PayPal to your account. You’ll be able
+            to order ahead or scan and pay at the register in one step.
+          </p>
+        </div>
+      </div>
+      <div class="grid grid-rows-1 grid-cols-3 col-span-3">
+        <div class="ml-10">
+          <h1 class="text-2xl font-bold">2★Stars per dollar</h1>
+          <p>Add funds in the app</p>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2 justify-center">
+          <img
+            src="https://www.starbucks.com/weblx/images/rewards/ways-to-pay/2A.png"
+            class="h-44 row-span-2 self-center"
+            alt=""
+          />
+          <h1 class="text-2xl font-bold col-start-2 self-center">Preload</h1>
+          <p class="col-start-2 self-center text-[14px]">
+            To save time and earn Stars twice as fast, add money to your digital Starbucks Card
+            using any payment option. Scan and pay in one step or order ahead in the app.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 grid-rows-2 justify-center">
+          <img
+            src="https://www.starbucks.com/weblx/images/rewards/ways-to-pay/2B.png"
+            class="h-44 row-span-2 self-center"
+            alt=""
+          />
+          <h1 class="text-2xl font-bold col-start-2 self-center">Register your gift card</h1>
+          <p class="col-start-2 self-center text-[14px]">
+            Then use it to pay through the app. You can even consolidate balances from multiple
+            cards in one place.
+          </p>
+        </div>
       </div>
     </section>
   </main>
