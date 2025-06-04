@@ -18,6 +18,10 @@ defineProps(['image', 'title'])
     >
       <slot></slot>
     </p>
-    <a href="#" class="text-center text-[#006241] underline col-start-2">learn more</a>
+    <a
+      href="#"
+      class="text-center text-[#006241] underline justify-self-center md:col-start-1 max-md:col-start-2"
+      >learn more</a
+    >
   </main>
 </template>

@@ -9,7 +9,7 @@ const visible = ref(false)
 </script>
 
 <template>
-  <main :class="visible ? 'fixed -top-0 overflow-hidden' : ''">
+  <main :class="[visible ? 'fixed -top-0 overflow-hidden' : '']">
     <NavBar>
       <img
         class="md:hidden"
@@ -107,6 +107,16 @@ const visible = ref(false)
           games.</Extra
         >
       </main>
+    </section>
+
+    <section class="bg-[#f2f0eb] h-screen grid grid-cols-4 grid-rows-3 mt-28">
+      <div class="col-span-full justify-self-center text-center grid content-evenly">
+        <h1 class="text-2xl font-bold justify-self-center">Cash or card, you earn Stars</h1>
+        <p class="text-md w-3/4 justify-self-center">
+          No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to
+          (really delicious) Rewards.
+        </p>
+      </div>
     </section>
   </main>
 </template>
