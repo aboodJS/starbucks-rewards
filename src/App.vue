@@ -80,7 +80,7 @@ const visible = ref(false)
       </main>
     </section>
     <RewardShocase></RewardShocase>
-    <section class="h-[70vh] grid mt-28">
+    <section class="md:h-[70vh] grid md:mt-28">
       <div class="grid justify-center content-center gap-7">
         <h1 class="text-center text-2xl font-bold">Endless Extras</h1>
         <p class="w-3/4 text-center justify-self-center">
@@ -88,7 +88,7 @@ const visible = ref(false)
           ordering, tasty Rewards and—yes, free coffee.
         </p>
       </div>
-      <main class="md:flex justify-center max-md:grid gap-7 justify-self-center">
+      <main class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center">
         <Extra
           title="Fun freebies"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
@@ -109,8 +109,10 @@ const visible = ref(false)
       </main>
     </section>
 
-    <section class="bg-[#f2f0eb] h-fit grid grid-cols-4 grid-rows-3 mt-28">
-      <div class="col-span-full justify-self-center text-center grid content-evenly">
+    <section class="bg-[#f2f0eb] h-fit grid grid-cols-4 grid-rows-3 md:mt-28">
+      <div
+        class="col-span-full row-start-1 justify-self-center text-center grid md:content-evenly content-center max-md:self-start"
+      >
         <h1 class="text-2xl font-bold justify-self-center">Cash or card, you earn Stars</h1>
         <p class="text-md w-3/4 justify-self-center">
           No matter how you pay, you can earn Stars with your morning coffee. Those Stars add up to
@@ -118,8 +120,8 @@ const visible = ref(false)
         </p>
       </div>
       <div class="grid grid-rows-1 grid-cols-3 col-span-3">
-        <div class="ml-10">
-          <h1 class="text-2xl font-bold">1★Star per dollar</h1>
+        <div class="ml-10 md:grid">
+          <h1 class="md:text-2xl font-bold">1★Star per dollar</h1>
           <p>Pay as you go</p>
         </div>
         <div class="grid grid-cols-2 grid-rows-2 justify-center content-center">
@@ -128,7 +130,7 @@ const visible = ref(false)
             class="h-44 row-span-2 self-center"
             alt=""
           />
-          <h1 class="text-2xl font-bold col-start-2">Scan and pay separately</h1>
+          <h1 class="md:text-2xl font-bold col-start-2">Scan and pay separately</h1>
           <p class="col-start-2 text-[14px]">Use cash or credit/debit card at the register.</p>
         </div>
         <div class="grid grid-cols-2 grid-rows-2 justify-center">

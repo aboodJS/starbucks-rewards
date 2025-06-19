@@ -6,7 +6,7 @@ const show = defineModel()
   <aside
     :class="[
       'grid md:hidden bg-white w-[70%] absolute h-[60vh] top-28 z-10',
-      show ? 'right-0' : '-right-80',
+      show ? 'right-0' : '-right-80 hidden',
     ]"
   >
     <div class="grid h-1/2 mt-12">
