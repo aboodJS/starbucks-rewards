@@ -9,7 +9,7 @@ const visible = ref(false)
 </script>
 
 <template>
-  <main :class="[visible ? 'fixed -top-0 overflow-hidden' : '']">
+  <main :class="[visible ? 'fixed -top-0 overflow-hidden' : 'overflow-y-scroll']">
     <NavBar>
       <img
         class="md:hidden"
@@ -80,7 +80,7 @@ const visible = ref(false)
       </main>
     </section>
     <RewardShocase></RewardShocase>
-    <section class="md:h-[70vh] grid md:mt-28">
+    <section class="md:h-[70vh] max-md:h-fit grid md:mt-28">
       <div class="grid justify-center content-center gap-7">
         <h1 class="text-center text-2xl font-bold">Endless Extras</h1>
         <p class="w-3/4 text-center justify-self-center">
@@ -108,7 +108,7 @@ const visible = ref(false)
         >
       </main>
     </section>
-    <section class="bg-[#f2f0eb] grid">
+    <section class="bg-[#f2f0eb] grid content-evenly gap-5">
       <div class="grid justify-center text-center mb-12">
         <h1 class="md:text-2xl font-bold text-[#1f1f1e]">Cash or card, you earn Stars</h1>
         <p class="w-3/4 text-center justify-self-center">
@@ -116,8 +116,8 @@ const visible = ref(false)
           (really delicious) Rewards.
         </p>
       </div>
-      <div class="md:flex max-md:grid text-[#1f1f1e] justify-between">
-        <div>
+      <div class="md:flex max-md:grid text-[#1f1f1e] ml-5 justify-self-center">
+        <div class="mb-10">
           <h1 class="md:text-2xl font-bold">1★Star per dollar</h1>
           <p>Pay as you go</p>
         </div>
@@ -151,8 +151,8 @@ const visible = ref(false)
         </div>
       </div>
       <hr class="text-[#d9d8d3] w-[90%] justify-self-center my-4" />
-      <div class="md:flex max-md:grid text-[#1f1f1e] justify-center">
-        <div>
+      <div class="md:flex max-md:grid text-[#1f1f1e] justify-self-center ml-5">
+        <div class="mb-10">
           <h1 class="md:text-2xl font-bold">2★Stars per dollar</h1>
           <p>Add funds in the app</p>
         </div>
@@ -162,9 +162,9 @@ const visible = ref(false)
             alt=""
             class="h-[158px] w-[112px]"
           />
-          <div>
-            <h1 class="h-fit font-bold mb-5">Preload</h1>
-            <p class="w-2/4 max-md:text-sm">
+          <div class="w-70 h-fit">
+            <h1 class="h-fit font-bold mb-5 w-fit">Preload</h1>
+            <p class="max-md:text-sm">
               To save time and earn Stars twice as fast, add money to your digital Starbucks Card
               using any payment option. Scan and pay in one step or order ahead in the app.
             </p>
