@@ -5,8 +5,8 @@ const show = defineModel()
 <template>
   <aside
     :class="[
-      'grid md:hidden bg-white w-[70%] absolute h-[60vh] top-28 z-10',
-      show ? 'right-0' : '-right-80 hidden',
+      'grid md:hidden bg-white w-[70%] absolute h-[60vh] top-28 z-10 transition-all',
+      show ? 'right-0 shadow-2xl shadow-black shadow' : '-right-80 hidden',
     ]"
   >
     <div class="grid h-1/2 mt-12">
@@ -23,11 +23,3 @@ const show = defineModel()
     </div>
   </aside>
 </template>
-
-<style>
-aside {
-  box-shadow:
-    inset #dfdfdf -1px 2px 2px,
-    0px 0px;
-}
-</style>
