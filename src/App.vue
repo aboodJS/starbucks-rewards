@@ -188,8 +188,11 @@ const visible = ref(false)
         </div>
       </div>
     </section>
-    <section id="partner-rewards" class="bg-[#0f4c3a] h-[90vh] grid justify-center content-center">
-      <div class="w-[95vw] h-[80vh] bg-[#d4e9e2] grid">
+    <section
+      id="partner-rewards"
+      class="bg-[#0f4c3a] h-[90vh] grid justify-center content-center max-md:mt-12"
+    >
+      <div class="w-[95vw] h-[80vh] bg-[#d4e9e2] grid max-md:h-fit">
         <div class="text-center h-28 grid justify-center content-center gap-6">
           <h1 class="text-2xl font-bold">Keep the Rewards Coming</h1>
           <p class="font-semibold max-md:text-sm">
