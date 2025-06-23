@@ -192,7 +192,7 @@ const visible = ref(false)
       id="partner-rewards"
       class="bg-[#0f4c3a] h-[90vh] grid justify-center content-center max-md:mt-12"
     >
-      <div class="w-[95vw] h-[80vh] bg-[#d4e9e2] grid max-md:h-fit">
+      <div class="w-[95vw] h-[80vh] bg-[#d4e9e2] grid max-md:h-fit max-md:w-screen">
         <div class="text-center h-28 grid justify-center content-center gap-6">
           <h1 class="text-2xl font-bold">Keep the Rewards Coming</h1>
           <p class="font-semibold max-md:text-sm">
@@ -228,6 +228,15 @@ const visible = ref(false)
         </button>
       </div>
     </section>
+    <div class="h-72 max-md:ml-4 grid content-center justify-center">
+      <span class="grid w-fit justify-self-center">
+        <h1 class="text-2xl font-bold">Questions?</h1>
+        <p class="text-sm grid justify-center">
+          We want to help in any way we can. You can ask your barista anytime or we’ve answered the
+          most commonly asked terms <a href="#" class="text-[#046241] underline">right over here</a>
+        </p>
+      </span>
+    </div>
   </main>
 </template>
 

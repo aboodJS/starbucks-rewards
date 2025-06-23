@@ -49,11 +49,9 @@ const tabs = { first, second, third, fourth, fifth }
       </ul>
     </div>
     <section
-      class="md:h-64 max-md:h-[70vh] bg-[#d4e9e2] inset-shadow grid justify-center items-center"
+      class="md:h-64 max-md:h-[70vh] bg-[#d4e9e2] inset-shadow grid justify-center items-center w-screen"
     >
-      <div class="w-fit">
-        <component :is="tabs[currentTab]"></component>
-      </div>
+      <component class="justify-self-center" :is="tabs[currentTab]"></component>
     </section>
   </main>
 </template>
