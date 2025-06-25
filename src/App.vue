@@ -237,7 +237,7 @@ const visible = ref(false)
         </p>
       </span>
     </div>
-    <section class="h-[110vh] bg-[#F9F9F9] w-screen">
+    <section class="h-[120vh] bg-[#F9F9F9] w-screen mb-12">
       <p class="text-xs grid gap-5 w-screen mb-12">
         <i>At participating stores. Restrictions apply. </i
         ><i>
@@ -322,6 +322,52 @@ const visible = ref(false)
         </div>
       </main>
     </section>
+    <footer>
+      <section class="h-[70vh] md:flex">
+        <ul class="grid">
+          <h1>About Us</h1>
+          <i><a href="">Our Company</a></i
+          ><i><a href="">Our Coffee</a></i
+          ><i><a href="">About Starbucks</a></i
+          ><i><a href="">StarBucks Archive</a></i
+          ><i><a href="">Investor Relations</a></i>
+          <i><a href="">Customer Service</a></i>
+          <i><a href="">Contact Us</a></i>
+        </ul>
+        <ul class="grid">
+          <h1>Careers</h1>
+          <i><a href="">Culture and Values</a></i
+          ><i><a href="">Belonging at Starbucks</a></i
+          ><i><a href="">College Achievement Plan</a></i
+          ><i><a href="">Alumni Community</a></i
+          ><i><a href="">US Careers</a></i>
+          <i>
+            <a href="">International Careers</a>
+          </i>
+        </ul>
+        <ul>
+          <i></i
+          ><i></i
+          ><i></i
+          ><i></i
+          ><i></i>
+        </ul>
+        <ul>
+          <i></i
+          ><i></i
+          ><i></i
+          ><i></i
+          ><i></i>
+        </ul>
+        <ul>
+          <i></i
+          ><i></i
+          ><i></i
+          ><i></i
+          ><i></i>
+        </ul>
+      </section>
+    </footer>
   </main>
 </template>
 
