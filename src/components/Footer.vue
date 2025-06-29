@@ -112,14 +112,14 @@ import DropDown from './DropDown.vue'
           <a href=""><i class="bx bxl-twitter text-4xl"></i></a>
         </li>
       </ul>
-      <ul class="grid gap-5 hover:underline">
-        <li><a href="">Privacy Notice</a></li>
-        <li><a href="">Consumer Health Privacy Notice</a></li>
-        <li><a href="">Terms of Use</a></li>
-        <li><a href="">Do Not Share My Personal Information</a></li>
-        <li><a href="">CA Supply Chain Act</a></li>
-        <li><a href="">Accessibility</a></li>
-        <li><a href="">Cookie Preferences</a></li>
+      <ul class="grid gap-5">
+        <li><a class="hover:underline" href="">Privacy Notice</a></li>
+        <li><a class="hover:underline" href="">Consumer Health Privacy Notice</a></li>
+        <li><a class="hover:underline" href="">Terms of Use</a></li>
+        <li><a class="hover:underline" href="">Do Not Share My Personal Information</a></li>
+        <li><a class="hover:underline" href="">CA Supply Chain Act</a></li>
+        <li><a class="hover:underline" href="">Accessibility</a></li>
+        <li><a class="hover:underline" href="">Cookie Preferences</a></li>
       </ul>
       <p class="text-[#6b6b6b]">© 2025 Starbucks Coffee Company. All rights reserved.</p>
     </section>

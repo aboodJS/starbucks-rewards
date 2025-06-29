@@ -9,6 +9,8 @@ import PartnerBox from './components/PartnerBox.vue'
 import Foot from './components/Footer.vue'
 import Footer from './components/Footer.vue'
 const visible = ref(false)
+const boxVisible = ref(false)
+const boxId = ref('')
 </script>
 
 <template>
@@ -91,19 +93,45 @@ const visible = ref(false)
           ordering, tasty Rewards and—yes, free coffee.
         </p>
       </div>
+      <div
+        :class="['absolute h-28 w-28 bg-[#ffffff] z-10', boxVisible ? 'grid' : 'hidden h-0 w-0']"
+      >
+        {{ boxId }}
+      </div>
       <main class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center">
         <Extra
+          @show-box="
+            () => {
+              boxVisible = !boxVisible
+              console.log(boxVisible)
+            }
+          "
+          unique-id="1"
           title="Fun freebies"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
           >Not only can you earn free food, drinks and more, look forward to a birthday treat on
           us.</Extra
         >
         <Extra
+          @show-box="
+            () => {
+              boxVisible = !boxVisible
+              console.log(boxVisible)
+            }
+          "
+          unique-id="2"
           title="Order & pay ahead"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/2-order-and-pay-ahead.jpg"
           >Master the art of ordering ahead with saved favorites and payment methods.</Extra
         >
         <Extra
+          @show-box="
+            () => {
+              boxVisible = !boxVisible
+              console.log(boxVisible)
+            }
+          "
+          unique-id="3"
           title="Get to free faster"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/3-get-to-free-faster.jpg"
           >Earn Stars even quicker with Bonus Star challenges, Double Star Days and exciting
