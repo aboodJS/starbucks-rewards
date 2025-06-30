@@ -95,7 +95,7 @@ const boxId = ref('')
       </div>
       <div
         :class="[
-          'absolute h-44 w-44 top-[250%] right-[45%] bg-[#ffffff] z-10 shadow-2xl',
+          'absolute h-96 w-80 top-[230%] right-[40%] bg-[#ffffff] z-10 shadow-2xl',
           boxVisible ? 'grid' : 'hidden h-0 w-0',
         ]"
       >
@@ -104,15 +104,15 @@ const boxId = ref('')
       </div>
       <main class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center">
         <Extra
+          unique-id="1"
+          title="Fun freebies"
+          image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
           @show-box="
             () => {
               boxVisible = !boxVisible
               console.log(boxVisible)
             }
           "
-          unique-id="1"
-          title="Fun freebies"
-          image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
           >Not only can you earn free food, drinks and more, look forward to a birthday treat on
           us.</Extra
         >
