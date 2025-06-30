@@ -94,8 +94,12 @@ const boxId = ref('')
         </p>
       </div>
       <div
-        :class="['absolute h-28 w-28 bg-[#ffffff] z-10', boxVisible ? 'grid' : 'hidden h-0 w-0']"
+        :class="[
+          'absolute h-44 w-44 top-[250%] right-[45%] bg-[#ffffff] z-10 shadow-2xl',
+          boxVisible ? 'grid' : 'hidden h-0 w-0',
+        ]"
       >
+        <i class="bx bx-x text-2xl grid justify-self-end" @click="() => (boxVisible = false)"></i>
         {{ boxId }}
       </div>
       <main class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center">
