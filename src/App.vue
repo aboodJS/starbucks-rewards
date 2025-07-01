@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, useTemplateRef } from 'vue'
 import Extra from './components/ExtraBox.vue'
 import GetStarted from './components/getStarted.vue'
 import NavBar from './components/NavBar.vue'
@@ -7,14 +7,20 @@ import RewardShocase from './components/rewardShocase.vue'
 import SideBar from './components/SideBar.vue'
 import PartnerBox from './components/PartnerBox.vue'
 import Foot from './components/Footer.vue'
-import Footer from './components/Footer.vue'
 const visible = ref(false)
 const boxVisible = ref(false)
 const boxId = ref('')
+const main = useTemplateRef('main')
 </script>
 
 <template>
-  <main :class="[visible ? 'fixed -top-0 overflow-hidden' : '']">
+  <main
+    ref="main"
+    :class="[
+      visible ? 'fixed -top-0 overflow-hidden z-0' : '',
+      boxVisible ? 'overflow-hidden fixed -top-[200%] z-0 h-fit' : '',
+    ]"
+  >
     <NavBar>
       <img
         class="md:hidden"
@@ -93,16 +99,20 @@ const boxId = ref('')
           ordering, tasty Rewards and—yes, free coffee.
         </p>
       </div>
-      <div
-        :class="[
-          'absolute h-96 w-80 top-[230%] right-[40%] bg-[#ffffff] z-10 shadow-2xl',
-          boxVisible ? 'grid' : 'hidden h-0 w-0',
-        ]"
+
+      <main
+        class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center relative"
       >
-        <i class="bx bx-x text-2xl grid justify-self-end" @click="() => (boxVisible = false)"></i>
-        {{ boxId }}
-      </div>
-      <main class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center">
+        <div
+          :class="[
+            boxVisible
+              ? 'grid absolute h-96 w-80 -top-[40%] right-[40%] bg-[#ffffff] z-10 shadow-2xl rounded-md'
+              : 'hidden h-0 w-0',
+          ]"
+        >
+          <i class="bx bx-x text-2xl grid justify-self-end" @click="() => (boxVisible = false)"></i>
+          {{ boxId }}
+        </div>
         <Extra
           unique-id="1"
           title="Fun freebies"
@@ -110,7 +120,6 @@ const boxId = ref('')
           @show-box="
             () => {
               boxVisible = !boxVisible
-              console.log(boxVisible)
             }
           "
           >Not only can you earn free food, drinks and more, look forward to a birthday treat on
@@ -120,7 +129,6 @@ const boxId = ref('')
           @show-box="
             () => {
               boxVisible = !boxVisible
-              console.log(boxVisible)
             }
           "
           unique-id="2"
@@ -132,7 +140,6 @@ const boxId = ref('')
           @show-box="
             () => {
               boxVisible = !boxVisible
-              console.log(boxVisible)
             }
           "
           unique-id="3"

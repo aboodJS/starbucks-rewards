@@ -1,6 +1,6 @@
 <script setup>
 defineProps(['image', 'title', 'unique-id'])
-defineEmits(['showBox'])
+defineEmits(['showBox', 'change-id'])
 </script>
 
 <template>
