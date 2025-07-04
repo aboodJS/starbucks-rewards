@@ -11,9 +11,9 @@ import PopupOne from './components/PopupOne.vue'
 import PopupTwo from './components/PopupTwo.vue'
 import PopupThree from './components/PopupThree.vue'
 const visible = ref(false)
-const boxVisible = ref(false)
 const Boxes = { PopupOne, PopupTwo, PopupThree }
 const currentBox = ref('')
+const dialog = useTemplateRef('dialog')
 </script>
 
 <template>
@@ -100,14 +100,18 @@ const currentBox = ref('')
       <main
         class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center relative"
       >
-        <component :is="Boxes[currentBox]"></component>
+        <dialog ref="dialog" class="top-50 left-[38%]" autofocus>
+          <component :is="Boxes[currentBox]"
+            ><i class="bx bx-x justify-self-end self-end text-3xl" @click="dialog.close()"></i
+          ></component>
+        </dialog>
         <Extra
           title="Fun freebies"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
           @show-box="
             () => {
-              boxVisible = !boxVisible
               currentBox = 'PopupOne'
+              dialog.showModal()
             }
           "
           >Not only can you earn free food, drinks and more, look forward to a birthday treat on
@@ -116,7 +120,7 @@ const currentBox = ref('')
         <Extra
           @show-box="
             () => {
-              boxVisible = !boxVisible
+              dialog.showModal()
               currentBox = 'PopupTwo'
             }
           "
@@ -127,7 +131,7 @@ const currentBox = ref('')
         <Extra
           @show-box="
             () => {
-              boxVisible = !boxVisible
+              dialog.showModal()
               currentBox = 'PopupThree'
             }
           "
