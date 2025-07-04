@@ -7,20 +7,17 @@ import RewardShocase from './components/rewardShocase.vue'
 import SideBar from './components/SideBar.vue'
 import PartnerBox from './components/PartnerBox.vue'
 import Foot from './components/Footer.vue'
+import PopupOne from './components/PopupOne.vue'
+import PopupTwo from './components/PopupTwo.vue'
+import PopupThree from './components/PopupThree.vue'
 const visible = ref(false)
 const boxVisible = ref(false)
-const boxId = ref('')
-const main = useTemplateRef('main')
+const Boxes = { PopupOne, PopupTwo, PopupThree }
+const currentBox = ref('')
 </script>
 
 <template>
-  <main
-    ref="main"
-    :class="[
-      visible ? 'fixed -top-0 overflow-hidden z-0' : '',
-      boxVisible ? 'overflow-hidden fixed -top-[200%] z-0 h-fit' : '',
-    ]"
-  >
+  <main ref="main" :class="[visible ? 'fixed -top-0 overflow-hidden z-0' : '']">
     <NavBar>
       <img
         class="md:hidden"
@@ -103,23 +100,14 @@ const main = useTemplateRef('main')
       <main
         class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center relative"
       >
-        <div
-          :class="[
-            boxVisible
-              ? 'grid absolute h-96 w-80 -top-[40%] right-[40%] bg-[#ffffff] z-10 shadow-2xl rounded-md'
-              : 'hidden h-0 w-0',
-          ]"
-        >
-          <i class="bx bx-x text-2xl grid justify-self-end" @click="() => (boxVisible = false)"></i>
-          {{ boxId }}
-        </div>
+        <component :is="Boxes[currentBox]"></component>
         <Extra
-          unique-id="1"
           title="Fun freebies"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/1-fun-freebies.jpg"
           @show-box="
             () => {
               boxVisible = !boxVisible
+              currentBox = 'PopupOne'
             }
           "
           >Not only can you earn free food, drinks and more, look forward to a birthday treat on
@@ -129,9 +117,9 @@ const main = useTemplateRef('main')
           @show-box="
             () => {
               boxVisible = !boxVisible
+              currentBox = 'PopupTwo'
             }
           "
-          unique-id="2"
           title="Order & pay ahead"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/2-order-and-pay-ahead.jpg"
           >Master the art of ordering ahead with saved favorites and payment methods.</Extra
@@ -140,9 +128,9 @@ const main = useTemplateRef('main')
           @show-box="
             () => {
               boxVisible = !boxVisible
+              currentBox = 'PopupThree'
             }
           "
-          unique-id="3"
           title="Get to free faster"
           image="https://www.starbucks.com/weblx/images/rewards/benefits/3-get-to-free-faster.jpg"
           >Earn Stars even quicker with Bonus Star challenges, Double Star Days and exciting
