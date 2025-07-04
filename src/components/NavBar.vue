@@ -4,7 +4,7 @@ import App from '@/App.vue'
 </script>
 
 <template>
-  <nav class="flex justify-between items-center h-28 w-screen overflow-x-hidden z-20 shadow-2xl">
+  <nav class="flex justify-between items-center h-28 w-screen overflow-x-hidden z-0">
     <div class="h-14 w-14 bg-green-700 md:hidden"></div>
     <slot></slot>
 
