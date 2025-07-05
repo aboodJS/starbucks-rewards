@@ -100,10 +100,10 @@ const dialog = useTemplateRef('dialog')
       <main
         class="md:flex justify-center max-md:grid max-md:text-md md:gap-7 justify-self-center relative"
       >
-        <dialog ref="dialog" class="top-50 left-[38%]" autofocus>
+        <dialog ref="dialog" class="top-15 left-[33%] h-[30rem] w-[30rem] overflow-x-hidden">
           <component :is="Boxes[currentBox]"
-            ><i class="bx bx-x justify-self-end self-end text-3xl" @click="dialog.close()"></i
-          ></component>
+            ><i class="bx bx-x text-3xl" @click="dialog.close()"></i>
+          </component>
         </dialog>
         <Extra
           title="Fun freebies"
