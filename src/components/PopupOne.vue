@@ -19,6 +19,41 @@ ul {
   width: 100vw;
   height: 35vh;
   display: flex;
+  anchor-name: --myCarousel;
+}
+
+ul::scroll-button(*) {
+  border: 0;
+  font-size: 2rem;
+  background: none;
+  color: rgb(0 0 0 / 0.7);
+  cursor: pointer;
+}
+
+ul::scroll-button(*):hover,
+ul::scroll-button(*):focus {
+  color: rgb(0 0 0 / 1);
+}
+
+ul::scroll-button(*):active {
+  translate: 1px 1px;
+}
+
+ul::scroll-button(*):disabled {
+  color: rgb(0 0 0 / 0.2);
+  cursor: unset;
+}
+
+ul::scroll-button(left) {
+  content: '<<';
+  right: calc(anchor(left) - 70px);
+  bottom: calc(anchor(top) + 13px);
+}
+
+ul::scroll-button(right) {
+  content: '>>';
+  left: calc(anchor(right) - 70px);
+  bottom: calc(anchor(top) + 13px);
 }
 
 li {
